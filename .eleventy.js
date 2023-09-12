@@ -1,7 +1,7 @@
-const { toISOString, toAbsoluteUrl } = require("./11ty/filters");
-const dir = require("./11ty/constants/dir");
-const imageShortcode = require("./11ty/shortcodes/image");
-const faviconShortcode = require("./11ty/shortcodes/favicon");
+const { toISOString, toAbsoluteUrl } = require('./11ty/filters');
+const dir = require('./11ty/constants/dir');
+const { imageShortcode, galleryShortcode, galleryImageShortcode } = require('./11ty/shortcodes/image');
+const faviconShortcode = require('./11ty/shortcodes/favicon');
 
 // Template language for the site: https://www.11ty.dev/docs/languages/liquid/
 const TEMPLATE_ENGINE = 'liquid';
@@ -13,6 +13,8 @@ module.exports = (eleventyConfig) => {
   // Custom shortcodes
   eleventyConfig.addShortcode('image', imageShortcode);
   eleventyConfig.addShortcode('favicon', faviconShortcode);
+  eleventyConfig.addPairedShortcode('gallery', galleryShortcode);
+  eleventyConfig.addShortcode('galleryImage', galleryImageShortcode);
 
   // Custom filters
   eleventyConfig.addFilter('toAbsoluteUrl', toAbsoluteUrl);

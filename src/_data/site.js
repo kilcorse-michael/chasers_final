@@ -3,16 +3,16 @@ const environmentSpecificVariables = {
     url: 'http://localhost:8080',
   },
   production: {
-    url: '',
+    url: 'https://chaserstoledo.com',
   },
 };
 
 module.exports = {
-  title: '',
-  author: '',
+  title: 'Chasers Toledo',
+  author: 'Michael Kilcorse',
   email: '',
   description: '',
-  keywords: [],
+  keywords: ['College Bar', 'Party', 'Toledo', 'Nightlife', 'Club', 'Dance club', 'Ohio', 'University of Toledo'],
   language: 'en-US',
   favicon: {
     widths: [32, 57, 76, 96, 128, 192, 228],

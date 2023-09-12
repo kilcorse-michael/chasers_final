@@ -1,9 +1,9 @@
 {
-  "name": "11ty-sass-images-seo",
-  "description": "An 11ty starter with project scaffolding, Sass, image optimization, and SEO enhancements.",
+  "name": "chasers-website",
+  "description": "A website for college bar Chasers to attract new clients and drive engagement",
   "version": "0.0.2",
   "license": "MIT",
-  "author": "AleksandrHovhannisyan",
+  "author": "Michael Kilcorse",
   "scripts": {
     "clean": "rimraf _site",
     "debug:html": "cross-env DEBUG=Eleventy* ELEVENTY_ENV=development npx @11ty/eleventy --serve --incremental --port=8080",
@@ -41,11 +41,14 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "post-checkout": "yarn"
+      "post-checkout": "npm"
     }
   },
   "lint-staged": {
-    "*.js": "yarn run lint:js:fix",
-    "*.scss": "yarn run lint:css:fix"
+    "*.js": "npm run lint:js:fix",
+    "*.scss": "npm run lint:css:fix"
+  },
+  "dependencies": {
+    "photoswipe": "^5.3.9"
   }
 }
