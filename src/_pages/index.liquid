@@ -15,3 +15,9 @@ permalink: /
   {% include 'map.liquid' %}
 </div>
 {% include 'footer.liquid' %}
+
+<script>
+  window.addEventListener('scroll', () => {
+    document.body.style.setProperty('--scroll', window.scrollY / (document.body.offsetHeight - window.innerHeight));
+  }, false);
+</script>
